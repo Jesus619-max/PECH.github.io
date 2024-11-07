@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Tema 10</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+						<img src="Imagenes/logo.jpeg" alt="reveal.js logo" style="height: 180px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					</a>
+					<h3>ALUMNO: Pech Serrano Jesus Alberto</h3>
+					<h4>MATERIA: Fundamentos de telecomunicación</h4>
+					<h5>Actividad: #886 </h5>
+				</section>	
+				<section>
+					<div style="background-image:url(Imagenes/FONDO.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%; height: 500px;" >
+					<h1>Introducción</h1>
+					
+						<p>
+							Para la mayoria de aplicaciones el sistema debe garantizar que los datos recibidos sean identicos a los datos transmitidos
+
+						</p>
+					</div>
+				</section>
+				<section>
+					<table>
+						<h3>Tipos de Errores</h3>
+						<tr>
+							<td>
+								<p>
+									Al transmitir bits, la interferencia puede alterar la señal. En un error de un solo bit, un 0 cambia a 1 o viceversa. En un error en ráfaga, varios bits se alteran, por ejemplo, el ruido en una transmisión de 1200 bps podría cambiar 12 bits de información.
+								</p>
+							</td>
+							<td style="vertical-align: top;">
+								<img src="Imagenes/error 1.jpg" width="4500" height="500" hspace="10" vspace="10">
+							</td>
+						</tr>
+					</table>
+				</section>
+				
+
+				<SEction>
+				<h3>Error de un solo bit</h3>
+				<p>
+					Al transmitir bits, la interferencia puede alterar la señal. En un error de un solo bit, un 0 cambia a 1 o viceversa. En un error en ráfaga, varios bits se alteran, por ejemplo, el ruido en una transmisión de 1200 bps podría cambiar 12 bits de información.
+				</p>
+				<img src="Imagenes/bit1.jpg" alt="reveal.js logo" width="200" height="200" hspace="10" vspace="10">
+					
+			</SEction>
+	
+			<section>
+				<section>
+					<table>
+						<tr>
+							<td>
+								<h3>
+									Metodos de corrección
+								</h3>
+								<p>
+									Existen 2 métodos de corrección de errores:
+								</p>
+							</td>
+							<td style="vertical-align: top;">
+								<img src="Imagenes/abajo.jpg" width="200" height="200" hspace="10" vspace="10">
+							</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<table>
+						<tr>
+							<td style="vertical-align: top;">
+								<h2>Forward error correction</h2>
+								<figure>
+									<img src="Imagenes/forward.png" width="900" height="400">
+									<figcaption>El receptor intenta adivinar el mensaje usando los bits restantes.</figcaption>
+								</figure>
+							</td>
+				
+							
+						</tr>
+					</table>
+				</section>
+				<section>
+					<table>
+						<tr>
+							<td style="vertical-align: top;">
+								<h2>Retransmisión</h2>
+								<figure>
+									<img src="Imagenes/Retransmisió1.jpg" width="900" height="400">
+									<figcaption>El receptor pide al emisor reenviar el mensaje hasta que llegue sin errores.</figcaption>
+								</figure>
+							</td>
+				
+							
+						</tr>
+					</table>
+				</section>
+	
+			</section>
+
+			<section>
+				<section>
+					<h1> Redundancia</h1>
+					<p>
+					Para detectar o corregir errores, se necesitan enviar bits extra junto a nuestros datos. Esta redundancia es eliminada por el receptor, permitiendo detectar o corregir los bits corruptos.
+					</p>
+					<img src="Imagenes/redundancia.png" alt="reveal.js logo" style="height: 250px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+				</section>
+	
+			</section>
+			<section>
+				<section>
+					<table>
+						<tr>
+							<td style="vertical-align: middle;">
+								<img src="Imagenes/Deteccion o Correccion 1.png" width="2000" height="300" hspace="1000" vspace="1000">
+							</td>
+							<h3>Deteccion o Correccion</h3>
+							<td>
+								<p>
+									En la detección, solo se verifica si hay un error, mientras que en la corrección se necesita saber cuántos bits están corruptos y sus ubicaciones, lo que aumenta la complejidad, especialmente en unidades de datos grandes.
+								</p>
+							</td>
+						</tr>
+					</table>
+				</section>
+
+		</section>
+		<section>
+			<section>
+				<table>
+					<tr>
+						<td style="vertical-align: middle;">
+							<img src="Imagenes/Codificar 1.jpg" width="4000" height="300" hspace="1000" vspace="1000">
+						</td>
+						<h3>Codificar</h3>
+						<td>
+							<p>
+								El emisor añade redundancia a los bits mientras un proceso crea una relación entre los bits redundantes y los bits verdaderos detectados.
+							</p>
+						</td>
+					</tr>
+				</table>
+			</section>	
+		</section>
+		<section>	
+			<section>
+				<h3>Aritmetica modular</h3>
+				<p>
+					<img src="Imagenes/arit1.jpg" align="left" width="200" height="200" hspace="10" vspace="10">
+					La aritmética modular utiliza un rango limitado de enteros definido por un módulo N, que establece un límite superior. Solo se consideran los enteros del 0 al N. En este sistema, si un número supera N, se divide por N y se toma el residuo como resultado.Si el número es negativo, se suma N hasta que sea positivo.
+				</p>
+			</section>
+		</section>
+		<section>
+			<table>
+				<tr>
+					<h2>
+						Codificación por bloques
+					</h2>
+					<td style="vertical-align: top;">
+						<figure>
+							<img src="Imagenes/monax.jpeg" width="1000" height="300">
+							<figcaption></figcaption>
+						</figure>
+					</td>
+					<td>
+						<p>
+							En la codificación por bloques, dividimos nuestro mensaje en bloques, cada uno con 'K' cantidad de bits llamada 'Palabra'. Se añaden 'r' bits redundantes para crear una longitud 'n = k + r'.
+						</p>
+					</td>
+				</tr>
+			</table>
+
+		</section>
+	
+		<section>
+			<section>
+				<h2>
+					Deteccion de Errores
+				</h2>
+				<p>
+					Existen maneras de detectar errores usando la codificación por bloques
+				</p>
+				<div align="center">
+					<img src="Imagenes/errores 2.png" width="200" height="200" hspace="10" vspace="10">
+				</div>
+			</section>	
+			<section>
+				<table>
+					<tr>
+						<td style="vertical-align: top;">
+							<img src="Imagenes/codigo validp.png" width="700" height="300" hspace="10" vspace="10">
+						</td>
+						<td>
+							<p>
+								El receptor encuentra la lista de los 'Códigos' válidos.
+							</p>
+						</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<table>
+					<tr>
+						<td style="vertical-align: top;">
+							<img src="Imagenes/invalido.png" width="700" height="300" hspace="10" vspace="10">
+						</td>
+						<td>
+							<p>
+								El 'Código' original ha sido cambiado a uno inválido.
+							</p>
+						</td>
+					</tr>
+				</table>
+			</section>
+			
+		</section>
+		<section>
+				
+			<section>
+				<h3>
+					<img src="Imagenes/correcion 2.png" align="left" width="200" height="200" hspace="10" vspace="10">
+					Corrección de errores
+				</h3>
+				<p>
+					<img src="Imagenes/mona3.jpeg" align="right" width="200" height="200" hspace="10" vspace="10">
+					En una corrección de errores, el receptor necesita saber que un solo 'código' es inválido. Asi que, necesita encontrar el 'código' original enviado.
+				</p>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h1>Hamming Distance</h1>
+				<p>
+					<img src="Imagenes/mona3.jpeg" align="right" width="200" height="200" hspace="10" vspace="10">
+					Es el número de diferencias entre sus bits. Se encuentra usando un operador de XOR y contando el número de 1s en el resultado.
+				</p>
+			</section>	
+		</section>
+		<section>
+			<section>
+				<h3>
+					Códigos cíclicos
+				</h3>
+				<p>
+					Son un tipo de Código de bloques con una propiedad extra.
+					<img src="Imagenes/mona 2.jpg" width="200" height="200" style="margin-left: 1000px; margin-right: 1000px; vertical-align: middle;">
+					Si un 'Código' es rotado o sus dígitos se ponen al revés, el resultado será otro 'Código' diferente.
+				</p>
+			</section>
+			<section>
+				<h1>Códigos cíclicos</h1>
+				<P>Son un tipo de Código de bloques con una propiedad extra. Si un 'Código' es rotado o sus dígitos se ponen al revés, el resultado será otro 'Código' diferente.</P>
+			</section>	
+		</section>
+		<section>
+			<section>
+				<h1>Implementación en el Hardware</h1>
+				<P>Una ventaja de los códigos cíclicos es que el codificador y el decodificador pueden ser fácilmente implementados en hardware.</P>
+			</section>	
+		</section>
+		<section>
+			<section>
+				<h1>Ventajas de códigos cíclicos</h1>
+				<P>Detectan errores de 1 bit, errores dobles, errores impares y errores de ráfaga. - Implementarse fácilmente en hardware y software.</P>
+			</section>	
+		</section>
+		<section>
+			<section>
+				<h1>Checksum</h1>
+				<P>Este se basa en la redundancia y es muy utilizado por diversos protocolos de Internet, esto para la detección de errores.</P>
+			</section>	
+		</section>
+		<section>
+			<section>
+				<h1>USOS</h1>
+				<P>Este consiste en enviar los bits al receptor junto con la suma de los bits dentro del paquete, permitiendo de esta manera al receptor comparar el resultado.</P>
+			</section>	
+			<section>
+				<h1> Checksum en el Internet</h1>
+				<p>El Internet utiliza un checksum de 16 bits. En este, el receptor calcula el resultado al dividir el mensaje en palabras de 16 bits y sumarlas usando complemento a uno.</p>
+			</section>
+			<section>
+				<h2>Detección de errores con Checksum</h2>
+				<p>El receptor usa los siguientes pasos para poder detectar los errores; -- El mensaje (incluido el checksum) se divide en palabras de 16 bits. -- Se suman las palabras, incluyendo 1 más. -- La suma se complementa y se convierte en el nuevo checksum. -- Si el checksum es 0, el mensaje es aceptado; de lo contrario, será rechazado</p>
+			</section>
+		</section>
+		
+	</section>
+	</section>
+	</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
